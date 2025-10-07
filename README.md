@@ -19,7 +19,7 @@
 
 ### Go to the site  
 
-[Click here: **Tongue**](tonguenews.netlify.app)
+[Click here: **Tongue**](https://tonguenews.netlify.app/)
 
 ### Technologies Used
 
@@ -79,7 +79,7 @@ This project is open source and available under the MIT License.
 
 ### Vai al sito 
 
-[Clicca qui: **Tongue**](tonguenews.netlify.app)
+[Clicca qui: **Tongue**](https://tonguenews.netlify.app/)
 
 ### Tecnologie Utilizzate
 
