@@ -19,7 +19,7 @@
 
 ### Go to the site  
 
-[Click here: **Tongue**](https://appthecounter.netlify.app/)
+[Click here: **Tongue**](tonguenews.netlify.app)
 
 ### Technologies Used
 
@@ -79,7 +79,7 @@ This project is open source and available under the MIT License.
 
 ### Vai al sito 
 
-[Clicca qui: **Tongue**](https://appthecounter.netlify.app/)
+[Clicca qui: **Tongue**](tonguenews.netlify.app)
 
 ### Tecnologie Utilizzate
 
