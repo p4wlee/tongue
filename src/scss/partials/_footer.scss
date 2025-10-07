@@ -1,0 +1,14 @@
+// Import variables
+@use '../variables' as *;
+
+footer {
+  a {
+    display: inline-block;
+  }
+
+  img {
+    margin-top: 15px;
+    width: 40px;
+    filter: brightness(0) invert(1);
+  }
+}
