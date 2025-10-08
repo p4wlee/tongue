@@ -1,4 +1,5 @@
 import "../scss/style.scss";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 /* These lines of code are setting up initial variables and constants for fetching and displaying news
 data from the Hacker News API. */
 const API_BASE = process.env.API_BASE;
