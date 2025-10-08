@@ -1,5 +1,5 @@
 const path = require("path");
-const Dotenv = require('dotenv-webpack');
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -46,7 +46,9 @@ module.exports = {
         { from: "src/img", to: "img" } // copia la cartella img in dist/
       ]
     }),
-    new Dotenv()
+    new webpack.DefinePlugin({
+      'process.env.API_BASE': JSON.stringify(process.env.API_BASE || "https://hacker-news.firebaseio.com/v0")
+    })
   ],
   mode: "development",
   devtool: "source-map" // utile per il debug del CSS/JS
