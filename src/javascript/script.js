@@ -1,7 +1,7 @@
 import "../scss/style.scss";
 /* These lines of code are setting up initial variables and constants for fetching and displaying news
 data from the Hacker News API. */
-const API_BASE = "https://hacker-news.firebaseio.com/v0";
+const API_BASE = process.env.API_BASE;
 const newsContainer = document.getElementById("news-container");
 const loadMoreButton = document.getElementById("load-more");
 

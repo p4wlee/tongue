@@ -1,4 +1,5 @@
 const path = require("path");
+const Dotenv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -44,7 +45,8 @@ module.exports = {
       patterns: [
         { from: "src/img", to: "img" } // copia la cartella img in dist/
       ]
-    })
+    }),
+    new Dotemv()
   ],
   mode: "development",
   devtool: "source-map" // utile per il debug del CSS/JS
