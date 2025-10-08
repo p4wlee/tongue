@@ -46,7 +46,7 @@ module.exports = {
         { from: "src/img", to: "img" } // copia la cartella img in dist/
       ]
     }),
-    new Dotemv()
+    new Dotenv()
   ],
   mode: "development",
   devtool: "source-map" // utile per il debug del CSS/JS
