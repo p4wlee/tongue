@@ -9,16 +9,16 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true // pulisce dist prima di ogni build
+    clean: true // cleans dist before every build
   },
   module: {
     rules: [
       {
         test: /\.scss$/i,
         use: [
-          MiniCssExtractPlugin.loader, // estrae CSS in file separato
-          "css-loader",               // interpreta @import e url()
-          "sass-loader"               // compila SCSS in CSS
+          MiniCssExtractPlugin.loader, // extract CSS into a separate file
+          "css-loader",               // interprets @import and url()
+          "sass-loader"               // compile SCSS to CSS
         ]
       },
       {
@@ -27,7 +27,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"] // compatibilità browser
+            presets: ["@babel/preset-env"] // browser compatibility
           }
         }
       }
@@ -35,15 +35,15 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css" // CSS generato in dist/
+      filename: "style.css" // CSS generated in dist/
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html", // template principale
+      template: "./index.html", // main template
       filename: "index.html"    // output in dist/
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "src/img", to: "img" } // copia la cartella img in dist/
+        { from: "src/img", to: "img" } // copy the img folder to dist/
       ]
     }),
     new webpack.DefinePlugin({
@@ -51,5 +51,5 @@ module.exports = {
     })
   ],
   mode: "development",
-  devtool: "source-map" // utile per il debug del CSS/JS
+  devtool: "source-map" // useful for debugging CSS/JS
 };
