@@ -34,22 +34,22 @@ module.exports = {
     ]
   },
   plugins: [
+    new Dotenv({
+      systemvars: true
+    }),
     new MiniCssExtractPlugin({
-      filename: "style.css" // CSS generated in dist/
+      filename: "style.css"
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html", // main template
-      filename: "index.html"    // output in dist/
+      template: "./index.html",
+      filename: "index.html"
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "src/img", to: "img" } // copy the img folder to dist/
+        { from: "src/img", to: "img" }
       ]
-    }),
-    new webpack.DefinePlugin({
-      'process.env.API_BASE': JSON.stringify(process.env.API_BASE || "https://hacker-news.firebaseio.com/v0")
     })
   ],
   mode: "development",
-  devtool: "source-map" // useful for debugging CSS/JS
+  devtool: "source-map"
 };
